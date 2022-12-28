@@ -115,7 +115,6 @@ console.log("Financial Analysis");
 console.log("-----------------------------");
 
 // The total number of months included in the dataset.
-// figure out how many rows there are in the finances variable
 console.log("Total Months: " + finances.length);
 
 // The net total amount of Profit/Losses over the entire period.
@@ -123,15 +122,13 @@ console.log("Total Months: " + finances.length);
 // probably a loop
 var netTotal = 0;
 var totalChange = 0;
-
 var changes = [];
 
 for (i = 0; i < finances.length; i++) {
   netTotal += finances[i][1];
   if (i != 0) {
-    // work out the change here
+    // change has been worked out here 
     var currentChange = finances[i][1] - finances[i-1][1];
-
     changes.push(currentChange);
     totalChange += currentChange;
   }
@@ -141,6 +138,8 @@ console.log("Total: $" + netTotal);
 
 // The average of the changes in Profit/Losses over the entire period.
 console.log("Average Change : $" + (totalChange/(finances.length - 1)).toFixed(2));
+
+// calculated changes in profits over the entire period.
 
 var greatestIncrease = Math.max(...changes);
 var greatestDecrease = Math.min(...changes);
@@ -152,8 +151,9 @@ var maxMonth = finances[indexMax][0]
 var minMonth = finances[indexMin][0]
 
 console.log(changes)
-
+// the greatest increse in profits
 console.log("Greatest Increase in Profits: " + maxMonth + " ($"+ greatestIncrease + ")");
+// the greatest decrease in profits
 console.log("Greatest Decrease in Profits: " + minMonth + " ($" + greatestDecrease + ")");
 
 
@@ -162,8 +162,6 @@ console.log("Greatest Decrease in Profits: " + minMonth + " ($" + greatestDecrea
 // You will need to track what the total change in profits is from month to month and then find the average.
 // (Total/total number of changes) ===> total change/(months - 1)
 // maybe put all the changes into an array? using .push(...) ?
-// The greatest increase in profits (date and amount) over the entire period.
-// start with 0
 //   check the last increase. If it's bigger than 0, keep track of the new biggest one.
 //   in a loop
 // The greatest decrease in losses (date and amount) over the entire period.
