@@ -111,28 +111,31 @@ var finances = [
 // Greatest Increase in Profits: Feb-2012 ($1926159)
 // Greatest Decrease in Profits: Sep-2013 ($-2196167)
 
+
+
+var netTotal = 0;
+var totalChange = 0;
+var changes = [];
+
+//applied loop
+
+for (i = 0; i < finances.length; i++) {
+  netTotal += finances[i][1];
+  if (i != 0) {
+  
+// change has been worked out here 
+    
+var currentChange = finances[i][1] - finances[i-1][1];
+    changes.push(currentChange);
+    totalChange += currentChange;
+  }
+}
+
 console.log("Financial Analysis");
 console.log("-----------------------------");
 
 // The total number of months included in the dataset.
 console.log("Total Months: " + finances.length);
-
-// The net total amount of Profit/Losses over the entire period.
-// add everything together
-// probably a loop
-var netTotal = 0;
-var totalChange = 0;
-var changes = [];
-
-for (i = 0; i < finances.length; i++) {
-  netTotal += finances[i][1];
-  if (i != 0) {
-    // change has been worked out here 
-    var currentChange = finances[i][1] - finances[i-1][1];
-    changes.push(currentChange);
-    totalChange += currentChange;
-  }
-}
 
 console.log("Total: $" + netTotal);
 
