@@ -2,7 +2,7 @@
 
 ## Description
  
- This challenge aims to use the concepts learned to write code in JavaScript for analyzing a company's financial records.
+ This challenge aims to use the concepts learned to write code in JavaScript for analysing a company's financial records.
 
 
 The calculation must include:
