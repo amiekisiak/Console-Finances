@@ -20,8 +20,8 @@ N/A
 
 ## Usage
 
-URL of the deployed application: 
-Screenshoot:
+URL of the deployed application: https://amiekisiak.github.io/Console-Finances/.
+
 
 
 ## License
